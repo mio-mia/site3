@@ -1,0 +1,199 @@
+:root {
+  font-family: "Montserrat", "NanumBarunGothic";
+  font-size: 12px;
+}
+
+body {
+  line-height: 1.6;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+  z-index: 100;
+}
+header .inner {
+  padding: 0 100px;
+}
+header a:hover {
+  color: #20bec6;
+}
+header #logo {
+  margin: 18px 50px 0 15px;
+  float: left;
+}
+header #logo a {
+  width: 100px;
+  height: 28px;
+  background: url("../images/logo.png") no-repeat;
+  background-size: 100% auto;
+  text-indent: -999999px;
+  transition: all 0.2s ease-in-out;
+}
+header #logo a:hover {
+  background-position: 0 bottom;
+}
+
+#gnb li {
+  float: left;
+  margin-top: 8px;
+}
+#gnb a {
+  font-weight: bold;
+  width: 70px;
+  padding: 15px;
+}
+#gnb a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+}
+#gnb a:hover::after {
+  width: 100%;
+}
+#gnb .sub {
+  display: none;
+}
+#gnb .sub li {
+  float: none;
+  margin: 0 0 0 15px;
+}
+#gnb .sub a {
+  font-weight: normal;
+  padding: 0;
+  font-size: 10px;
+  white-space: nowrap;
+}
+#gnb .sub a::after {
+  display: none;
+}
+#gnb .sub a:hover {
+  text-decoration: underline;
+}
+#gnb:hover .sub {
+  display: block;
+}
+
+#sns {
+  float: right;
+}
+#sns li {
+  float: left;
+  margin-top: 8px;
+}
+#sns a {
+  padding: 15px 5px;
+}
+
+#main_visual {
+  overflow: hidden;
+  background-color: #000;
+}
+#main_visual .slider {
+  height: 100vh;
+  display: flex;
+}
+#main_visual .slider article {
+  width: 100%;
+  flex-shrink: 0;
+  background: center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#main_visual .slider article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+}
+#main_visual .slider .view1 {
+  background-image: url("../images/view01.jpg");
+}
+#main_visual .slider .view2 {
+  background-image: url("../images/view02.jpg");
+}
+#main_visual .slider .view3 {
+  background-image: url("../images/view03.jpg");
+}
+#main_visual .slider .view4 {
+  background-image: url("../images/view04.jpg");
+}
+#main_visual .slider .view5 {
+  background-image: url("../images/view05.jpg");
+}
+#main_visual .slider .view6 {
+  background-image: url("../images/view06.jpg");
+}
+#main_visual .slider .txt {
+  color: #fff;
+  position: absolute;
+  bottom: 120px;
+  left: 120px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+#main_visual .slider .txt h3 {
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 300;
+}
+#main_visual .slider .txt p {
+  font-size: 18px;
+  padding: 20px 0;
+}
+#main_visual .slider .txt a {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  border: 1px solid #fff;
+}
+#main_visual .slider .txt a:hover {
+  background-color: #fff;
+  color: #000;
+}
+#main_visual .slider .txt i {
+  display: inline-block;
+  vertical-align: -1px;
+  padding-left: 6px;
+}
+#main_visual .slider .active .txt {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+#main_visual .pager {
+  position: absolute;
+  z-index: 10;
+  bottom: 16px;
+  left: 50%;
+}
+#main_visual .pager span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+}
+#main_visual .pager span.active {
+  background: #fff;
+}
