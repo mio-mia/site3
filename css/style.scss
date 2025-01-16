@@ -33,6 +33,20 @@ header{
   }
 }
 
+.open_menu{
+  display: none; position: relative; z-index: 101; cursor: pointer;
+  i{float: left;}
+  .xi-close{display: none;}
+  span{font-size: 10px; line-height: 1.1;
+  margin-left: 5px; padding-top: 2px;
+  letter-spacing: 2px; font-weight: 300;}
+  &.active{
+    color: #fff;
+    .xi-bars{display: none;}
+    .xi-close{display: inline;}
+  }
+}
+
 #gnb{
   li{float: left; margin-top: 8px;}
   a{font-weight: bold; width: 70px; padding: 15px;}
@@ -61,6 +75,41 @@ header{
   float: right;
   li{float: left; margin-top: 8px;}
   a{padding: 15px 5px;}
+}
+
+#btns{
+  float: right;
+  li{float: left; margin-top: 8px;}
+  a{padding: 15px 5px;}
+}
+
+.open_search{
+  position: relative; cursor: pointer;
+  span{position: absolute; background: #000; color: #fff;
+    top: 50px; left: -11px; padding: 2px 8px; white-space: nowrap;
+    border-radius: 3px; opacity: 0; visibility: hidden; transition: all 0.4s;}
+  span::before{content: ""; position: absolute; top: -5px; left: 50%; margin-left: -5px;
+  border-width: 0 5px 5px 5px; border-style: solid; border-color: #000 transparent;}
+  &:hover span{opacity: 1; visibility: visible;}
+}
+
+#search{
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999;
+  background: #000; color: #5abcc4;
+  display: flex; justify-content: center; align-items: center;
+  opacity: 0; visibility: hidden; transition: all 0.3s; transform: scale(1.1, 1.1);
+  &.show{opacity: 1; visibility: visible; transform: scale(1,1);}
+  .inner{width: 50%;}
+  input{width: 100%; font-size: 7vw; padding: 0 0.1em; background: none; border: 0;
+    border-bottom: 2px solid #5abcc4; outline: none; color: #5abcc4; box-sizing: border-box;}
+  input::placeholder{color: #222;}
+  p{font-size: 90%; font-weight: bold; padding: 0.85em 0; text-align: right;}
+  .close_search{
+    position: absolute; top: 1.25em; right: 1.25em; font-size: 2.5em;
+    padding: 10px; cursor: pointer; line-height: 1;
+    i{transition: all 0.3s;}
+    &:hover i{transform: rotate(90deg);}
+  }
 }
 
 #main_visual{
@@ -94,5 +143,191 @@ header{
     span{display: inline-block; width: 6px; height: 6px; margin: 0 5px;
     border-radius: 50%; border: 1px solid #fff; background: transparent; cursor: pointer;}
     span.active{background: #fff;}
+  }
+}
+
+#works{
+	padding-bottom:100px; border-bottom:1px solid #eee;
+	h2{margin:50px 120px; font-size:20px; font-weight:bold;}
+	.list{
+		display:flex; flex-wrap:wrap;
+		li{border:1px solid #fff; height:14vw; box-sizing:border-box;
+			/*flex-grow:커지는비율; flex-shrink:작아지는비율; flex-basis:너비;*/
+			flex:0 0 25%;}	
+		a{width:100%; height:100%; background:#000; overflow:hidden;
+			position:relative; color:#fff;}
+    p{height: 100%;}
+		img{width:100%; height:100%; object-fit:cover; opacity:.5;
+			transition:all .2s ease-in-out;}
+		h3{position:absolute; left:20px; bottom:30px; font-size:18px;
+			letter-spacing:-1px; white-space:nowrap; width:calc(100% - 40px);
+			overflow:hidden; text-overflow:ellipsis; font-weight:bold;
+			transition:all .2s ease-in-out;}
+		span{position:absolute; left:20px; bottom:15px;}
+		i{margin-right:4px;}	
+		a:hover{
+			img{opacity:1; transform:scale(1.12);}
+			h3{bottom:41px;}
+		}//end:a:hover
+	}//end:.list
+}//end:#works
+
+#about{
+	background:url("../images/twoply-bg.jpg") center/cover no-repeat fixed;
+	color:#fff; text-align:center;
+	.inner{padding:100px 0; background:#0008;}
+	h2{font-size:30px; line-height:1.1; margin-bottom:30px;}
+	p{width:50%; margin:0 auto 30px; font-size:24px; line-height:1.42;
+		font-weight:300; word-break:keep-all;}
+	a{width:300px; height:50px; line-height:50px; font-size:16px;
+		border:1px solid #fff;}	
+	a:hover{background:#fff; color:#222;}	
+}//end:#about
+
+#press{
+  background: #eee; padding: 50px 0; overflow: hidden;
+  h2{margin: 0 0 50px 120px; font-size: 20px; font-weight: bold;}
+  h2 a:hover{text-decoration: underline;}
+  .inner{padding:  20px 50px;}
+  .slider{
+    display: flex;
+    .item{flex-shrink: 0; background: #fff; transition: all 0.2s ease-in-out;}
+    .item:hover{transform: translateY(-10px); box-shadow:  0 20px 30px #aaa;}
+    .item.last{background: none; transform: none; box-shadow: none;}
+    img{width: 100%;}
+    h3{padding: 10px 15px; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-weight: 300;}
+    h3:hover{color: #20bec6;}
+    h3+p{padding: 0 15px 10px; font-size: 10px;}
+    .more{display: block; max-width: 200px; height: 50px; margin: 0 auto; line-height: 50px; text-align: center;
+    font-size: 16px; color: #222; border: 1px solid #222;}
+    .more:hover{background: #222; color: #fff;}
+  }
+  .dot{
+    margin-top: 40px; text-align: center;
+    span{display: inline-block; margin: 0 5px; width: 8px; height: 8px; background: #000; border-radius: 50%;
+    cursor: pointer; opacity: 0.3;}
+    span.active{opacity: 1;}
+  }
+}
+
+#partners{
+  padding: 100px 0;
+  h2{font-size: 20px; line-height: 1.1; font-weight: bold; text-align: center;}
+  ul{width: 1140px; margin: 0 auto; padding: 0 50px;
+    display: flex; flex-wrap: wrap;}
+  li{flex: 0 0 20%;}
+  img{width: 100%; opacity: 0.3; transition: all 0.3 ease-in-out;}
+  img:hover{opacity: 1;}
+}
+
+footer{
+  background: #000; color: #999;
+  .inner{height: 150px; padding: 50px 120px; line-height: 1.4; display: flex;}
+  .logo{width: 30%;}
+  .logo img{width: 100px;}
+  .info{
+    width: 35%; padding-left: 20px;
+    dt{font-size: 20px; margin-bottom: 30px;}
+    dd{margin-bottom: 5px;}
+  }
+  .copy{padding: 20px 120px; border-top: 1px solid #222;
+  p{margin: 10px 0; font-size: 10px;}
+  }
+}
+
+
+/* Web size end / media size start */
+
+// 태블릿
+@media all and (max-width: 1024px){
+  header .inner{padding: 0 50px;}
+  #main_visual .slider .txt{left: 60px;}
+  #work .list{
+    li{flex-basis: 50%; height: 28vw;}
+    img{opacity: 0.7;}
+    h3{font-size: 28px; font-weight: 300;}
+  }
+}
+
+// 모바일
+@media all and (max-width: 768px){
+  header{
+    .inner{padding: 0 25px;}
+    #logo{margin-left: 0;}
+    .open_menu{display: block;}
+    .menu{position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 100;
+      background: #000; padding: 0 50px; box-sizing: border-box;
+      transform: translateY(-100%); visibility: hidden; transition: all 0.2s ease-in-out;
+      &.active{
+        transform: translateY(0); visibility: visible;
+        #gnb>ul>li{transform: translateY(0); visibility: visible;
+          &:nth-child(1){transition-delay: 0.45s;}
+          &:nth-child(2){transition-delay: 0.4s;}
+          &:nth-child(3){transition-delay: 0.35s;}
+          &:nth-child(4){transition-delay: 0.3s;}
+          &:nth-child(5){transition-delay: 0.25s;}
+          &:nth-child(6){transition-delay: 0.2s;}
+        }
+      }
+      #gnb{
+        padding-top: 50px;
+        >ul>li{float: none; border-bottom: 1px solid #333;
+        margin-bottom: 10px; padding-bottom: 8px;
+        transform: translateY(-100px); visibility: hidden;
+        transition: all 0.2s ease-out;
+      }
+        >ul>li>a{font-size: 22px; width: auto; padding: 5px 0 10px;
+          line-height: 0.8; color: #fff;}
+        >ul>li>a::after{display: none;}
+        .sub{display: block; padding: 0 0 0 10px;
+          li{list-style: disc;}
+          a{font-size: 16px; line-height: 1.1;}
+        }
+      }
+    }
+    #sns{
+      float: none; font-size: 14px; color: #fff;
+      li{width: 33%;}
+    }
+  } // header
+
+  #search{
+    .inner{width: 70%;}
+    span{display: none;}
+  }
+
+  #main_visual .slider .txt{
+    left: 0; padding-left: 40px; bottom: 80px;
+    h3{font-size: 40px;}
+  }
+  
+  #works{
+    h2{margin-left: 30px;}
+    .list{
+      display: block; margin: 0 20px;
+      li{margin-bottom: 20px; border: 0; box-shadow: 0 0 15px #ccc;
+      height: 65vw;}
+      img{border-radius: 5px;}
+      h3{bottom: 36px !important; opacity: 1; transform: none !important;}
+    }
+  } //works
+  #about p{width: 92%; padding: 20px 4%; font-size: 16px; margin: 0;}
+
+
+  #press{
+    h3{margin-left: 30px;}
+    .inner{padding: 20px;}
+  }
+
+  #partners{
+    ul{padding: 50px 20px;}
+    li{flex-basis: 50%;}
+    img{opacity: 1;}
+  }
+
+  footer{
+    .inner{padding: 50px 20px; height: auto;}
+    .copy{padding: 20px; text-align: center;}
   }
 }

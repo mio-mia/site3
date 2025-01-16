@@ -23,60 +23,80 @@
       <div id="logo">
         <h1><a href="#">디자인투플라이</a></h1>
       </div>
-      <nav id="gnb">
+      <div id="btns">
         <ul>
-          <li><a href="#">ABOUT</a>
-            <div class="sub">
-              <ul>
-                <li><a href="#">BRAND STORY</a></li>
-                <li><a href="#">PROCESS</a></li>
-                <li><a href="#">NEWS</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">WORKS</a>
-            <div class="sub">
-              <ul>
-                <li><a href="#">ARCHITECTURE</a></li>
-                <li><a href="#">RESIDENCE</a></li>
-                <li><a href="#">COMMERCIAL</a></li>
-                <li><a href="#">MEDIAL</a></li>
-                <li><a href="#">OFFICE</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">BRANDING</a>
-            <div class="sub">
-              <ul>
-                <li><a href="#">LOGO</a></li>
-                <li><a href="#">WEB</a></li>
-                <li><a href="#">PRINT</a></li>
-                <li><a href="#">EMBLEM</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">PRESS</a></li>
-          <li><a href="#">고객문의</a>
-            <div class="sub">
-              <ul>
-                <li><a href="#">BRAND</a></li>
-                <li><a href="#">WORKSTORY</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a onclick="open_search();" class="open_search"><i class="xi-search xi-2x"></i>
+            <span>검색하기</span></a></li>
+          <li><a onclick="open_menu(this);" class="open_menu">
+            <i class="xi-bars xi-2x"></i>
+            <i class="xi-close xi-2x"></i>
+            <span>전체<br>메뉴</span></a></li>
         </ul>
-      </nav> <!-- nav -->
-      <div id="sns">
-        <ul>
-          <li><a href="#"><i class="xi-instagram xi-2x"></i></a></li>
-          <li><a href="#"><i class="xi-facebook-official xi-2x"></i></a></li>
-          <li><a href="#"><i class="xi-naver-square xi-2x"></i></a></li>
-          <li><a href="#"><i class="xi-search xi-2x"></i></a></li>
-        </ul>
-      </div> <!-- sns -->
+      </div> <!-- #btns -->
+      <div class="menu">
+        <nav id="gnb">
+          <ul>
+            <li><a href="#">ABOUT</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">BRAND STORY</a></li>
+                  <li><a href="#">PROCESS</a></li>
+                  <li><a href="#">NEWS</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">WORKS</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">ARCHITECTURE</a></li>
+                  <li><a href="#">RESIDENCE</a></li>
+                  <li><a href="#">COMMERCIAL</a></li>
+                  <li><a href="#">MEDIAL</a></li>
+                  <li><a href="#">OFFICE</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">BRANDING</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">LOGO</a></li>
+                  <li><a href="#">WEB</a></li>
+                  <li><a href="#">PRINT</a></li>
+                  <li><a href="#">EMBLEM</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">PRESS</a></li>
+            <li><a href="#">고객문의</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">BRAND</a></li>
+                  <li><a href="#">WORKSTORY</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav> <!-- nav -->
+        <div id="sns">
+          <ul>
+            <li><a href="#"><i class="xi-instagram xi-2x"></i></a></li>
+            <li><a href="#"><i class="xi-facebook-official xi-2x"></i></a></li>
+            <li><a href="#"><i class="xi-naver-square xi-2x"></i></a></li>
+          </ul>
+        </div> <!-- sns -->
+      </div> <!-- .menu -->
     </div> <!-- inner -->
   </header>
+  <aside id="search">
+    <div class="inner">
+      <form>
+        <input type="text" placeholder="Search..">
+        <p>검색을 하시려면 Enter, 닫으시려면 <span>Esc 또는</span> X를 눌러주세요.</p>
+      </form>
+    </div>
+    <a onclick="close_search();" class="close_search"><i class="xi-close"></i></a>
+  </aside>
   <main>
     <!-- 🍥main_visual -->
     <section id="main_visual">
@@ -126,6 +146,200 @@
       </div><!-- slider -->
       <div class="pager"></div>
     </section>
+    <section id="works">
+			<h2><a href="#">works</a></h2>
+			<ul class="list">
+				<li><a href="#">
+						<p><img src="images/works/work01.jpg" alt=""></p>
+						<h3>온가족이 함께 할 수 있는 공간 – 진흥더블파크 50평대 아파트인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work02.jpg" alt=""></p>
+						<h3>에코시티 포스코 더샵 2차 – 40평대 아파트 인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work03.jpg" alt=""></p>
+						<h3>전주 신시가지 아이파크 – 50평대 아파트인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work04.jpg" alt=""></p>
+						<h3>전주 에코시티 자이 인테리어 – 40평대 아파트인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work05.jpg" alt=""></p>
+						<h3>코디얼레시피CORDIAL RECIPE – 전주객리단길 카페</h3>
+						<span><i class="xi-paper-o"></i>commercial, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work06.jpg" alt=""></p>
+						<h3>코디얼레시피CORDIAL RECIPE – 전주객리단길 카페</h3>
+						<span><i class="xi-paper-o"></i>commercial, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work07.jpg" alt=""></p>
+						<h3>테이블웍스(table works) – 스터디카페</h3>
+						<span><i class="xi-paper-o"></i>commercial, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work08.jpg" alt=""></p>
+						<h3>디자이너의 집 미니멀 라이프 – 상가주택 인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work09.jpg" alt=""></p>
+						<h3>그루브(Groove) – 프리미엄 하우스브랜드 안경 편집샵</h3>
+						<span><i class="xi-paper-o"></i>commercial, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work10.jpg" alt=""></p>
+						<h3>익산 포스코 더샵 40평대 아파트 인테리어 – 전주인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work11.jpg" alt=""></p>
+						<h3>더나은미래의원 – 전주 병원 인테리어</h3>
+						<span><i class="xi-paper-o"></i>medical, works</span>
+					</a></li>
+				<li><a href="#">
+						<p><img src="images/works/work12.jpg" alt=""></p>
+						<h3>전북대 올스타 양궁카페 인테리어</h3>
+						<span><i class="xi-paper-o"></i>residence, works</span>
+					</a></li>
+			</ul>
+		</section><!--end:#works-->
+		<section id="about">
+			<div class="inner">
+				<h2>ABOUT DESIGNTWOPLY</h2>
+				<p>항상 지켜봐 주시고 응원해주시고, 소중한 인연이 되어주신 모든
+					클라이언트 분들께 다시 한번 감사드립니다. 앞으로도 기대에 어긋나지
+					않는 디자인투플라이가 되기 위해 열심히 노력하겠습니다.</p>
+				<a href="#">ABOUT DESIGNTWOPLY <i class="xi-long-arrow-right"></i></a>
+			</div>
+		</section><!--end:#about-->
+    <section id="press">
+      <h2><a href="#">PRESS</a></h2>
+      <div class="inner">
+        <ul class="slider">
+          <li class="item">
+            <p><img src="images/press/p01.jpg" alt=""></p>
+            <h3>데코저널 2024.04</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p02.jpg" alt=""></p>
+            <h3>데코저널 2024.03</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p03.jpg" alt=""></p>
+            <h3>데코저널 2024.02</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p04.jpg" alt=""></p>
+            <h3>데코저널 2024.01</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p05.jpg" alt=""></p>
+            <h3>데코저널 2023.12</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p06.jpg" alt=""></p>
+            <h3>데코저널 2023.11</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p07.jpg" alt=""></p>
+            <h3>데코저널 2023.10</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p08.jpg" alt=""></p>
+            <h3>데코저널 2023.09</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p09.jpg" alt=""></p>
+            <h3>데코저널 2023.08</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item">
+            <p><img src="images/press/p10.png" alt=""></p>
+            <h3>데코저널 2023.07</h3>
+            <p><i class="xi-paper-o"></i>press</p>
+          </li>
+          <li class="item last">
+            <a href="#" class="more">PRESS MORE
+              <i class="xi-long-arrow-right"></i></a>
+          </li>
+        </ul>
+        <div class="dot"></div>
+      </div>
+    </section>
+    <section id="partners">
+      <h2>PARTNERS</h2>
+      <ul>
+        <li><img src="images/partners/01.jpg" alt=""></li>
+        <li><img src="images/partners/02.jpg" alt=""></li>
+        <li><img src="images/partners/03.jpg" alt=""></li>
+        <li><img src="images/partners/04.jpg" alt=""></li>
+        <li><img src="images/partners/05.jpg" alt=""></li>
+        <li><img src="images/partners/06.jpg" alt=""></li>
+        <li><img src="images/partners/07.jpg" alt=""></li>
+        <li><img src="images/partners/08.jpg" alt=""></li>
+        <li><img src="images/partners/09.jpg" alt=""></li>
+        <li><img src="images/partners/10.jpg" alt=""></li>
+        <li><img src="images/partners/11.jpg" alt=""></li>
+        <li><img src="images/partners/12.jpg" alt=""></li>
+        <li><img src="images/partners/13.jpg" alt=""></li>
+        <li><img src="images/partners/14.jpg" alt=""></li>
+        <li><img src="images/partners/15.jpg" alt=""></li>
+        <li><img src="images/partners/16.jpg" alt=""></li>
+        <li><img src="images/partners/17.jpg" alt=""></li>
+        <li><img src="images/partners/18.jpg" alt=""></li>
+        <li><img src="images/partners/19.jpg" alt=""></li>
+        <li><img src="images/partners/20.jpg" alt=""></li>
+        <li><img src="images/partners/21.jpg" alt=""></li>
+        <li><img src="images/partners/22.jpg" alt=""></li>
+        <li><img src="images/partners/23.jpg" alt=""></li>
+        <li><img src="images/partners/24.jpg" alt=""></li>
+        <li><img src="images/partners/25.jpg" alt=""></li>
+        <li><img src="images/partners/26.jpg" alt=""></li>
+        <li><img src="images/partners/27.jpg" alt=""></li>
+      </ul>
+    </section>
+    <footer>
+      <div class="inner">
+        <div class="logo">
+          <h1><img src="images/btm-logo.png" alt="디자인투플라이"></h1>
+        </div>
+        <div class="info">
+          <dl>
+            <dt>JEONJU</dt>
+            <dd>634-7, Junghwasan-dong 2-ga, Wansan-gu, Jeonju-si, Jeollabuk-do, Korea</dd>
+            <dd>designtwoply@naver.com</dd>
+            <dd>Tel : 070-4120-2678</dd>
+            <dd>Fax : 063-232-2679</dd>
+          </dl>
+        </div>
+        <div class="info">
+          <dt>DAEGU</dt>
+          <dd>14, Muhak-ro 21an-gil, Suseong-gu, Daegu, Korea</dd>
+          <dd>twoplytk@naver.com</dd>
+          <dd>Tel : 053-295-2915</dd>
+          <dd>Fax : 053-295-2916</dd>
+        </div>
+      </div>
+      <div class="copy">
+        <p>Copyright &copy; 디자인투플라이 All Rights Reserved.</p>
+      </div>
+    </footer>
   </main>
 
 
