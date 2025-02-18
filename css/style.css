@@ -528,9 +528,9 @@ header #logo a:hover {
   text-align: center;
 }
 #partners ul {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 50px 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -540,7 +540,7 @@ header #logo a:hover {
 #partners img {
   width: 100%;
   opacity: 0.3;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #partners img:hover {
   opacity: 1;
@@ -573,11 +573,11 @@ footer .info dt {
 footer .info dd {
   margin-bottom: 5px;
 }
-footer .copy {
+footer .copyright {
   padding: 20px 120px;
   border-top: 1px solid #222;
 }
-footer .copy p {
+footer .copyright p {
   margin: 10px 0;
   font-size: 10px;
 }
@@ -756,5 +756,81 @@ footer .copy p {
   footer .copy {
     padding: 20px;
     text-align: center;
+  }
+}
+@media all and (max-width: 420px) {
+  #main_visual {
+    border-bottom: 1px solid #eee;
+  }
+  #main_visual .slider .txt {
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    bottom: 0;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+  }
+  #main_visual .slider .txt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background: #fff;
+    z-index: -1;
+    transform: skewY(10deg);
+  }
+  #main_visual .slider .txt h3 {
+    order: 2;
+    font-size: 30px;
+    line-height: 1.3;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+  }
+  #main_visual .slider .txt p {
+    order: 3;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 15px;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+  }
+  #main_visual .slider .txt a {
+    order: 1;
+    font-size: 12px;
+    text-align: left;
+    height: auto;
+    border: 0;
+  }
+  #main_visual .slider .active .txt h3 {
+    transform: translateY(0);
+    transition-delay: 0.8s;
+  }
+  #main_visual .slider .active .txt p {
+    transform: translateY(0);
+    transition-delay: 1s;
+  }
+  #main_visual .pager {
+    left: auto;
+    right: 15px;
+    transform: none;
+  }
+  #main_visual .pager span {
+    border-color: #000;
+  }
+  #main_visual .pager span.active {
+    background: #000;
+  }
+  footer .inner {
+    flex-wrap: wrap;
+  }
+  footer .logo {
+    width: calc(100% - 20px);
+    padding: 0 0 20px 20px;
+  }
+  footer .info {
+    width: calc(50% - 20px);
   }
 }

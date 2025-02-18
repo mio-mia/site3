@@ -71,7 +71,7 @@ var menu = document.querySelector(".menu");
   //     = html에 있는 .menu 중 첫번째 .menu를 js의 여러 변수(속성)과 함수(메소드)를
   //       가질 수 있는 객체로 취급하겠다
 
-function open_menu(btn){
+function open_menu(btn){    // btn = 클릭된 버튼요소
   menu.classList.toggle("active");
   // ㄴ> classList.toggle(); = () 안에 지정한 클래스가 없으면 추가, 있으면 제거[class에만 적용]
   btn.classList.toggle("active");
